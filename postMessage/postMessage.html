@@ -31,8 +31,9 @@
                 win = window.open('https://yyccqqu.github.io/projects/postMessage/win.html', 'popUp');
             }
             btn_send.onclick = function () {
+                var value = document.getElementById("message").value
                 // 通过 postMessage 向子窗口发送数据      
-                win.postMessage('Hello', 'https://yyccqqu.github.io/projects/');
+                win.postMessage('postMessage页面向子窗口win发送的信息：'+ value, 'https://yyccqqu.github.io/projects/');
             }
             function sendIt(e) {
                 // 通过 postMessage 向子窗口发送数据
